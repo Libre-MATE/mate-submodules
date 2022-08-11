@@ -165,8 +165,8 @@ static void stop_drag_check(GtkWidget *widget) {
 
   g_slist_free(priv_data->event_list);
   priv_data->event_list = NULL;
-  g_signal_handler_disconnect(widget, priv_data->motion_notify_handler);
-  g_signal_handler_disconnect(widget, priv_data->button_release_handler);
+  g_clear_signal_handler(&priv_data->motion_notify_handler, widget);
+  g_clear_signal_handler(&priv_data->button_release_handler, widget);
 }
 
 static gboolean egg_tree_multi_drag_button_release_event(GtkWidget *widget,
