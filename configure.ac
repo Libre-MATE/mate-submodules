@@ -15,8 +15,7 @@ MATE_DEBUG_CHECK([no])
 MATE_COMPILE_WARNINGS
 
 AC_PROG_CC
-AM_DISABLE_STATIC
-AC_PROG_LIBTOOL
+LT_INIT([disable-static])
 PKG_PROG_PKG_CONFIG
 
 dnl ==========================================================================
