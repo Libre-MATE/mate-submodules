@@ -14,12 +14,9 @@
 # License along with this library; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
-AC_PREREQ(2.61)
-
 AC_INIT([mate-submodules], [1.24.0], [https://mate-desktop.org])
-AM_INIT_AUTOMAKE([1.9 foreign dist-xz no-dist-gzip check-news])
-m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
-
+AC_PREREQ(2.61)
+AM_INIT_AUTOMAKE([1.11 foreign dist-xz no-dist-gzip silent-rules check-news])
 AC_CONFIG_SRCDIR([config.h.in])
 AC_CONFIG_HEADER([config.h])
 AC_CONFIG_MACRO_DIR([m4])
@@ -61,8 +58,10 @@ AC_SUBST([LIBEGG_LIBS])
 
 dnl ******************************
 
-AC_CONFIG_FILES([Makefile
-		 libegg/Makefile])
+AC_CONFIG_FILES([
+Makefile
+libegg/Makefile
+])
 AC_OUTPUT
 
 echo "
