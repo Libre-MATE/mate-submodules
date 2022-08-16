@@ -14,7 +14,11 @@
 # License along with this library; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
-AC_INIT([mate-submodules], [1.24.0], [https://mate-desktop.org])
+AC_INIT([mate-submodules],
+        [1.24.0],
+        [https://github.com/Libre-MATE/mate-submodules/issues],
+        [mate-submodules],
+        [https://github.com/Libre-MATE/mate-submodules/])
 AC_PREREQ(2.61)
 AM_INIT_AUTOMAKE([1.11 foreign dist-xz no-dist-gzip silent-rules check-news])
 AC_CONFIG_SRCDIR([config.h.in])
